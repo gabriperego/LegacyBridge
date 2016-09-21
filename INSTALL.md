@@ -89,6 +89,10 @@ It must be installed using Composer:
 composer require --update-no-dev ezsystems/legacy-bridge
 ```
 
+### Symfony application configuration folder setup
+
+By default the legacy autoload generation expects `ezpublish` as a Symfony application configuration folder, this is not true anymore in eZ Platform. To properly set `app` instead you have to create a `config.php` file copying the `config.php-RECOMMENDED` de-commenting the `EZP_APP_FOLDER_NAME` named constant, the value must be `app`.
+
 ### Setup Folder Permissions
 
 Last step, if you are on *nix operation system, is to make sure to run 
